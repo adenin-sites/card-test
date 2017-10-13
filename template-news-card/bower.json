@@ -1,0 +1,8 @@
+{
+  "name": "template-news-card",
+  "version": "0.0.1.25",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master"
+  }
+}

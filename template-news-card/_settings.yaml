@@ -1,0 +1,79 @@
+id: !!int 240
+contentType: Card
+UserActions:
+  cardId: !!int 240
+  hasNotifications: !!bool true
+  isIsoloated: !!bool false
+  maxItems: !!int 3
+  pinnable: !!bool true
+title: News
+name: template-news-card
+StreamSource: null
+CollectionModeField:
+  CollectionMode: 0
+PriorityField:
+  Priority: 5
+MaxItemsField:
+  MaxItems: 3
+CardComponent: template-news-card/template-news-card-card
+StoreMetadataField:
+  description: 
+  logourl: 
+  storehide: !!bool false
+  disableWorkplace: !!bool false
+CommonPart:
+  Owner: !!int 222
+  Container: null
+  CreatedUtc: 2017-10-11T15:21:56.8870318Z
+  PublishedUtc: 2017-10-11T16:08:20.5119002Z
+  ModifiedUtc: 2017-10-11T16:08:20.4806460Z
+  VersionCreatedUtc: 2017-10-11T16:08:20.0000000
+  VersionPublishedUtc: 2017-10-11T16:08:20.0000000
+  VersionModifiedUtc: 2017-10-11T16:08:20.0000000
+ServicePart:
+  ConnectorTypeName: Generic RSS
+  ConnectorTypeId: !!int 241
+  ConnectorName: bbc-news
+  ServiceName: Feed
+  Url: ~/api/adenin.GateKeeper.Connector/bbc-news/Feed
+  ServiceParameters: '{}'
+SearchContextPart:
+  Query: null
+  Interface: null
+CommandPart:
+  CommandType: None
+  Command: 
+  DefaultDate: null
+  Intent: null
+  Ext: {}
+AppPart:
+  App: null
+  Url: 
+  ExtUrl: 
+  Priority: !!int 0
+  AppFaceId: !!int 0
+  Category: orange
+  Icon: now:search
+  CSSClasses: null
+  Enabled: !!bool false
+  NewWindow: !!bool false
+  UrlWithId: !!bool true
+  AvailableAppFaceRecords: null
+  HasPattern: !!bool false
+RoleViewPermissionsPart:
+  AllowedRoles:
+    - Authenticated
+  Audiences: []
+  Mandatory: False
+RecurringTaskPart:
+  Schedule: 0 * * * *
+  ActivityType: adenin.Now.Activities.CardTask.UpdateCard
+  StartDateUtc: null
+  EndDateUtc: null
+  NextOccurrenceUtc: 2017-10-13T12:40:15.0000000
+  Priority: !!int 5
+  Status: Enabled
+  NowFlag: 0
+  LastExecutionUTC: 2017-10-13T12:40:15.0000000
+  EnableWebHook: !!bool false
+  WebHookToken: null

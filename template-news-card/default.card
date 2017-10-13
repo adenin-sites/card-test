@@ -1,0 +1,580 @@
+$type: card
+rules: []
+properties:
+  title:
+    type: element
+    xtype: at-carbon-card-title
+    links:
+      - title: Go to BBC.co.uk
+        url: bbc.co.uk
+        icon: now:link
+    title: title
+    xgridcols: 12
+    xstyle: 
+    xclass: 
+    actionListeners:
+      - _start
+  content:
+    type: element
+    xtype: at-core-view
+    modelRoot: state.model
+    model: 
+    view: |
+      <style>
+          .news-list-image {
+       height: 80px;
+          width: 105px;
+        }
+      </style>
+      <div class="container layout-vertical news-list m">
+        {% for item in items | limit: 7 %}
+       <div class="news-item layout-horizontal mbsm {% if forloop.index > 3 %}expanded-only{%endif%}">
+         <div class="mr mtsm"><iron-image sizing="cover" class="news-list-image" alt="Placeholder Title" src="{{item.cardimage}}"></iron-image></div>
+         <div class="layout-flex"><at-link href="{{item.link}}" class="font-subhead primary"><at-carbon-clamp lines="2">{{item.title}}</at-carbon-clamp></at-link><at-carbon-clamp lines="2">{{item.description}}</at-carbon-clamp></div>
+       </div>
+        {%endfor%}
+      </div>
+    xgridcols: 12
+    xstyle: 
+    xclass: 
+    actionListeners:
+      - _start
+    default: 
+  footer3:
+    type: element
+    xtype: at-carbon-card-footer
+    href: http://news.bbc.co.uk
+    expandable: !!bool true
+    title: View all BBC News
+    xgridcols: 12
+    xstyle: 
+    xclass: 
+    actionListeners:
+      - _start
+$meta:
+  cardId: 240
+  preview-data: |-
+    {
+      "items": [
+        {
+          "title": "UK will spend what is needed to prepare for Brexit - No 10",
+          "description": "The PM spoke after her chancellor said it was too soon to start spending on plans for \"no deal\".",
+          "link": "http://www.bbc.co.uk/news/uk-politics-41583661",
+          "guid": "http://www.bbc.co.uk/news/uk-politics-41583661",
+          "pubDate": "2017-10-11T15:30:02Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T15:30:02Z",
+          "id": "http://www.bbc.co.uk/news/uk-politics-41583661",
+          "twittercard": "summary_large_image",
+          "cardtitle": "May: We'll spend what's needed on Brexit",
+          "carddescription": "The PM spoke after her chancellor said it was too soon to start spending on plans for \"no deal\".",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/4855/production/_98271581_mediaitem98265294.jpg"
+        },
+        {
+          "title": "Catalonia: Spain takes step towards direct rule",
+          "description": "The Spanish government asks Catalonia's administration whether it has declared independence or not.",
+          "link": "http://www.bbc.co.uk/news/world-europe-41582469",
+          "guid": "http://www.bbc.co.uk/news/world-europe-41582469",
+          "pubDate": "2017-10-11T14:49:10Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:49:10Z",
+          "id": "http://www.bbc.co.uk/news/world-europe-41582469",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Spain takes step to Catalan direct rule",
+          "carddescription": "The Spanish government asks Catalonia's administration whether it has declared independence or not.",
+          "cardimage": "https://ichef.bbci.co.uk/images/ic/560x315/p05jn05d.jpg"
+        },
+        {
+          "title": "Bafta suspends Harvey Weinstein's membership",
+          "description": "The British film and TV academy says his alleged behaviour is \"completely unacceptable\".",
+          "link": "http://www.bbc.co.uk/news/entertainment-arts-41586442",
+          "guid": "http://www.bbc.co.uk/news/entertainment-arts-41586442",
+          "pubDate": "2017-10-11T15:28:41Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T15:28:41Z",
+          "id": "http://www.bbc.co.uk/news/entertainment-arts-41586442",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Bafta suspends Harvey Weinstein",
+          "carddescription": "The British film and TV academy says his alleged behaviour is \"completely unacceptable\".",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/3D01/production/_98271651_gettyimages-510050808.jpg"
+        },
+        {
+          "title": "Harvey Weinstein: Secret recording of undercover sting",
+          "description": "The New Yorker releases audio of an alleged undercover sting operation by New York Police in 2015.",
+          "link": "http://www.bbc.co.uk/news/entertainment-arts-41586272",
+          "guid": "http://www.bbc.co.uk/news/entertainment-arts-41586272",
+          "pubDate": "2017-10-11T14:08:42Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:08:42Z",
+          "id": "http://www.bbc.co.uk/news/entertainment-arts-41586272",
+          "twittercard": "summary_large_image",
+          "cardtitle": "'Secret recording' of Harvey Weinstein",
+          "carddescription": "The New Yorker releases audio of an alleged undercover sting operation by New York Police in 2015.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/14E0D/production/_98271558_mediaitem98271557.jpg"
+        },
+        {
+          "title": "Teaching to test 'too flimsy' - Ofsted boss",
+          "description": "Ofsted's boss says pupils need access to a wide and creative curriculum.",
+          "link": "http://www.bbc.co.uk/news/education-41580550",
+          "guid": "http://www.bbc.co.uk/news/education-41580550",
+          "pubDate": "2017-10-11T13:46:24Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T13:46:24Z",
+          "id": "http://www.bbc.co.uk/news/education-41580550",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Teaching to test 'hollow' - Ofsted boss",
+          "carddescription": "Ofsted's boss says pupils need access to a wide and creative curriculum.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/17152/production/_98264549_childrentest3.jpg"
+        },
+        {
+          "title": "PM defends benefits reform in Corbyn clash",
+          "description": "The Labour leader and a Conservative MP both call for changes to the way universal credit is run.",
+          "link": "http://www.bbc.co.uk/news/uk-politics-41580365",
+          "guid": "http://www.bbc.co.uk/news/uk-politics-41580365",
+          "pubDate": "2017-10-11T13:45:49Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T13:45:49Z",
+          "id": "http://www.bbc.co.uk/news/uk-politics-41580365",
+          "twittercard": "summary_large_image",
+          "cardtitle": "PM defends welfare reform in Corbyn clash",
+          "carddescription": "The Labour leader and a Conservative MP both call for changes to the way universal credit is run.",
+          "cardimage": "https://ichef.bbci.co.uk/images/ic/560x315/p05jnh9w.jpg"
+        },
+        {
+          "title": "Grenfell fire: One year immigration amnesty can become permanent",
+          "description": "The Home Office also said relatives who came to the UK to help survivors can stay for six months.",
+          "link": "http://www.bbc.co.uk/news/uk-41586892",
+          "guid": "http://www.bbc.co.uk/news/uk-41586892",
+          "pubDate": "2017-10-11T14:44:23Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:44:23Z",
+          "id": "http://www.bbc.co.uk/news/uk-41586892",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Grenfell survivors offered full residency",
+          "carddescription": "The Home Office also said relatives who came to the UK to help survivors can stay for six months.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/3C1A/production/_98268351_gettyimages-696146400.png"
+        },
+        {
+          "title": "Daredevil 85-year-old completes charity paraglide",
+          "description": "Trish Wagstaff from Oxfordshire raised £20,000 for charity with her latest challenge.",
+          "link": "http://www.bbc.co.uk/news/uk-england-oxfordshire-41585842",
+          "guid": "http://www.bbc.co.uk/news/uk-england-oxfordshire-41585842",
+          "pubDate": "2017-10-11T14:17:52Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:17:52Z",
+          "id": "http://www.bbc.co.uk/news/uk-england-oxfordshire-41585842",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Daredevil 85-year-old's charity paraglide",
+          "carddescription": "Trish Wagstaff from Oxfordshire raised ??20,000 for charity with her latest challenge.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/31A3/production/_98270721_trishwagstaff.jpg"
+        },
+        {
+          "title": "North Yorkshire's The Black Swan 'best restaurant in world'",
+          "description": "The Black Swan beats Heston Blumenthal's The Fat Duck and Raymond Blanc's Le Manoir.",
+          "link": "http://www.bbc.co.uk/news/uk-england-york-north-yorkshire-41582994",
+          "guid": "http://www.bbc.co.uk/news/uk-england-york-north-yorkshire-41582994",
+          "pubDate": "2017-10-11T13:04:45Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T13:04:45Z",
+          "id": "http://www.bbc.co.uk/news/uk-england-york-north-yorkshire-41582994",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Village pub 'best restaurant in world'",
+          "carddescription": "The Black Swan beats Heston Blumenthal's The Fat Duck and Raymond Blanc's Le Manoir.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/8C24/production/_98267853_ahw_blackswan_exterior-3.jpg"
+        },
+        {
+          "title": "Flooding closes roads and schools in Cumbria",
+          "description": "Sandbags were made available to those affected in the worst areas.",
+          "link": "http://www.bbc.co.uk/news/uk-england-cumbria-41582974",
+          "guid": "http://www.bbc.co.uk/news/uk-england-cumbria-41582974",
+          "pubDate": "2017-10-11T14:19:58Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:19:58Z",
+          "id": "http://www.bbc.co.uk/news/uk-england-cumbria-41582974",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Flooding closes roads and schools",
+          "carddescription": "Sandbags were made available to those affected in the worst areas.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/14A93/production/_98272648_blennerhasset.png"
+        },
+        {
+          "title": "Hampton school gives pupils alarm clocks to replace 'distracting phones'",
+          "description": "A west London school gives its students free clocks to stop mobile phones interrupting their sleep.",
+          "link": "http://www.bbc.co.uk/news/uk-england-london-41581994",
+          "guid": "http://www.bbc.co.uk/news/uk-england-london-41581994",
+          "pubDate": "2017-10-11T12:39:06Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T12:39:06Z",
+          "id": "http://www.bbc.co.uk/news/uk-england-london-41581994",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Phone-in-bed pupils given alarm clocks",
+          "carddescription": "A west London school gives its students free clocks to stop mobile phones interrupting their sleep.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/12CA6/production/_98266967_hi042164411.jpg"
+        },
+        {
+          "title": "Unsent text accepted as dead man's will by Australian court",
+          "description": "A court in Australia rules a draft text message can be accepted as an official will.",
+          "link": "http://www.bbc.co.uk/news/technology-41580970",
+          "guid": "http://www.bbc.co.uk/news/technology-41580970",
+          "pubDate": "2017-10-11T09:47:09Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T09:47:09Z",
+          "id": "http://www.bbc.co.uk/news/technology-41580970",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Unsent text accepted as dead man's will",
+          "carddescription": "A court in Australia rules a draft text message can be accepted as an official will.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/1104/production/_98265340_gettyimages.jpg"
+        },
+        {
+          "title": "Two sisters, a mountain trek and a wobbly wire bridge",
+          "description": "Two sisters, a perilous mountain trek and a wobbly wire bridge - high in the Indian Himalayas.",
+          "link": "http://www.bbc.co.uk/news/world-41527080",
+          "guid": "http://www.bbc.co.uk/news/world-41527080",
+          "pubDate": "2017-10-10T23:41:52Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-10T23:41:52Z",
+          "id": "http://www.bbc.co.uk/news/world-41527080",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Our perilous trek to school",
+          "carddescription": "Two sisters, a perilous mountain trek and a wobbly wire bridge - high in the Indian Himalayas.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/4C47/production/_98172591_1920x1080-360-video-final-2.jpg"
+        },
+        {
+          "title": "Anne Robinson on her abortion 'black doom'",
+          "description": "The broadcaster talks about her termination in a BBC film, marking 50 years since the Abortion Act.",
+          "link": "http://www.bbc.co.uk/news/uk-41565851",
+          "guid": "http://www.bbc.co.uk/news/uk-41565851",
+          "pubDate": "2017-10-11T11:31:26Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T11:31:26Z",
+          "id": "http://www.bbc.co.uk/news/uk-41565851",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Anne Robinson on her abortion 'black doom'",
+          "carddescription": "The broadcaster talks about her termination in a BBC film, marking 50 years since the Abortion Act.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/9B72/production/_98249793_annerobinson.jpg"
+        },
+        {
+          "title": "Talking to children about sex and relationships",
+          "description": "Social media and the ease of access to explicit material on the web means the tricky topic of sex is even more of a minefield for parents.",
+          "link": "http://www.bbc.co.uk/news/education-41552666",
+          "guid": "http://www.bbc.co.uk/news/education-41552666",
+          "pubDate": "2017-10-11T00:02:03Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T00:02:03Z",
+          "id": "http://www.bbc.co.uk/news/education-41552666",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Talking to children about sex and relationships",
+          "carddescription": "Social media and the ease of access to explicit material on the web means the tricky topic of sex is even more of a minefield for parents.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/162B5/production/_98250809_parenttalk.jpg"
+        },
+        {
+          "title": "Michelle Keegan: Is Our Girl too glamorous?",
+          "description": "Viewers were surprised by how flawless actress Michelle Keegan looked in a disaster zone.",
+          "link": "http://www.bbc.co.uk/news/entertainment-arts-41583485",
+          "guid": "http://www.bbc.co.uk/news/entertainment-arts-41583485",
+          "pubDate": "2017-10-11T15:44:30Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T15:44:30Z",
+          "id": "http://www.bbc.co.uk/news/entertainment-arts-41583485",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Our Girl return faces 'glamour' criticism",
+          "carddescription": "Viewers were surprised by how flawless actress Michelle Keegan looked in a disaster zone.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/68AC/production/_98269762_keegan_bbc1.jpg"
+        },
+        {
+          "title": "Celebrating black and Asian life in England",
+          "description": "Historic England launches a year-long campaign that will map a century of England’s history from a black and Asian perspective.",
+          "link": "http://www.bbc.co.uk/news/in-pictures-41567587",
+          "guid": "http://www.bbc.co.uk/news/in-pictures-41567587",
+          "pubDate": "2017-10-11T00:01:35Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T00:01:35Z",
+          "id": "http://www.bbc.co.uk/news/in-pictures-41567587",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Celebrating black and Asian life in England",
+          "carddescription": "Historic England launches a year-long campaign that will map a century of England???s history from a black and Asian perspective.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/172CD/production/_98252949_couple.jpg"
+        },
+        {
+          "title": "100 Women: Saving Nepal’s children from growing up in prison",
+          "description": "Indira Ranamagar has offered hundreds of children a new life outside their mothers' prison cells.",
+          "link": "http://www.bbc.co.uk/news/world-41574758",
+          "guid": "http://www.bbc.co.uk/news/world-41574758",
+          "pubDate": "2017-10-11T01:13:57Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T01:13:57Z",
+          "id": "http://www.bbc.co.uk/news/world-41574758",
+          "twittercard": "summary_large_image",
+          "cardtitle": "The woman who's rescued 1,600 children",
+          "carddescription": "Indira Ranamagar has offered hundreds of children a new life outside their mothers' prison cells.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/18051/production/_98258389_p05jlh0p.jpg"
+        },
+        {
+          "title": "How this woman got a killer to confess",
+          "description": "Follow DCI Sarah Jones as she proves a missing man has been killed and she finds the murderer.",
+          "link": "http://www.bbc.co.uk/news/magazine-41558776",
+          "guid": "http://www.bbc.co.uk/news/magazine-41558776",
+          "pubDate": "2017-10-11T00:01:09Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T00:01:09Z",
+          "id": "http://www.bbc.co.uk/news/magazine-41558776",
+          "twittercard": "summary_large_image",
+          "cardtitle": "How this woman got a killer to confess",
+          "carddescription": "Follow DCI Sarah Jones as she proves a missing man has been killed and she finds the murderer.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/1643B/production/_98259119_p05jll6b.jpg"
+        },
+        {
+          "title": "How one MEP donated his kidney to help an MP",
+          "description": "Khalid Mahmood had previously refused to say who had given him the life-saving donation in 2014.",
+          "link": "http://www.bbc.co.uk/news/uk-politics-41580360",
+          "guid": "http://www.bbc.co.uk/news/uk-politics-41580360",
+          "pubDate": "2017-10-11T09:45:41Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T09:45:41Z",
+          "id": "http://www.bbc.co.uk/news/uk-politics-41580360",
+          "twittercard": "summary_large_image",
+          "cardtitle": "MEP's kidney donation to MP revealed",
+          "carddescription": "Khalid Mahmood had previously refused to say who had given him the life-saving donation in 2014.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/10C26/production/_98264686_f96faff3-32a1-4b47-9d42-ef95294f256f.jpg"
+        },
+        {
+          "title": "BBC News Channel",
+          "description": "BBC coverage of latest developments",
+          "link": "http://www.bbc.co.uk/news/10318089",
+          "guid": "http://www.bbc.co.uk/news/10318089",
+          "pubDate": "2017-09-15T09:16:21Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-09-15T09:16:21Z",
+          "id": "http://www.bbc.co.uk/news/10318089",
+          "twittercard": "summary_large_image",
+          "cardtitle": "BBC News Channel",
+          "carddescription": "BBC coverage of latest developments",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/media/images/83122000/png/_83122356_globe_2048x1152.png"
+        },
+        {
+          "title": "'Why I want gender-neutral UK passports'",
+          "description": "A transgender blogger says gender-neutral passports would be a sign of respect.",
+          "link": "http://www.bbc.co.uk/newsbeat/articles/41567449",
+          "guid": "http://www.bbc.co.uk/newsbeat/articles/41567449",
+          "pubDate": "2017-10-11T10:43:08Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T10:43:08Z",
+          "id": "http://www.bbc.co.uk/newsbeat/articles/41567449",
+          "twittercard": "summary_large_image",
+          "cardtitle": "\n  'Why I want gender-neutral UK passports'\n",
+          "carddescription": "UK passports currently have \"M\" or a \"F\" for people to specify their gender - but what about \"X\"?",
+          "cardimage": "http://ichef.bbci.co.uk/news/976/cpsprodpb/2946/production/_98266501_18298392_254485728292135_3569590350982938624_n.jpg"
+        },
+        {
+          "title": "Harvey Weinstein: The accusers' stories",
+          "description": "A string of actresses have claimed he harassed or assaulted them in hotel rooms and offices.",
+          "link": "http://www.bbc.co.uk/news/entertainment-arts-41580010",
+          "guid": "http://www.bbc.co.uk/news/entertainment-arts-41580010",
+          "pubDate": "2017-10-11T15:27:26Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T15:27:26Z",
+          "id": "http://www.bbc.co.uk/news/entertainment-arts-41580010",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Harvey Weinstein: The accusers' stories",
+          "carddescription": "A string of actresses have claimed he harassed or assaulted them in hotel rooms and offices.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/8A30/production/_98267353_gettyimages-846603670.jpg"
+        },
+        {
+          "title": "The man diagnosed with pathological laughter",
+          "description": "Following a brutal assault Paul Pugh was left with pathological laughter - a condition which causes him to laugh at the most inappropriate moments.",
+          "link": "http://www.bbc.co.uk/news/disability-40629897",
+          "guid": "http://www.bbc.co.uk/news/disability-40629897",
+          "pubDate": "2017-10-10T23:49:52Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-10T23:49:52Z",
+          "id": "http://www.bbc.co.uk/news/disability-40629897",
+          "twittercard": "summary_large_image",
+          "cardtitle": "The man diagnosed with pathological laughter",
+          "carddescription": "Following a brutal assault Paul Pugh was left with pathological laughter - a condition which causes him to laugh at the most inappropriate moments.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/10D06/production/_97507886_mediaitem97507885.jpg"
+        },
+        {
+          "title": "What to do if your child is overweight",
+          "description": "The key advice for helping children maintain a healthy weight and reducing their risk of obesity.",
+          "link": "http://www.bbc.co.uk/news/health-37116611",
+          "guid": "http://www.bbc.co.uk/news/health-37116611",
+          "pubDate": "2017-10-11T11:26:30Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T11:26:30Z",
+          "id": "http://www.bbc.co.uk/news/health-37116611",
+          "twittercard": "summary_large_image",
+          "cardtitle": "What to do if your child is overweight",
+          "carddescription": "The key advice for helping children maintain a healthy weight and reducing their risk of obesity.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/116BC/production/_98265317_mediaitem98265316.jpg"
+        },
+        {
+          "title": "Is the SNP's childcare pledge 'unmatched'?",
+          "description": "How do plans to expand childcare provision in Scotland compare with schemes in the rest of the UK?",
+          "link": "http://www.bbc.co.uk/news/uk-scotland-41571583",
+          "guid": "http://www.bbc.co.uk/news/uk-scotland-41571583",
+          "pubDate": "2017-10-11T14:01:57Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:01:57Z",
+          "id": "http://www.bbc.co.uk/news/uk-scotland-41571583",
+          "twittercard": "summary_large_image",
+          "cardtitle": "Reality Check: Is the SNP's childcare pledge 'unmatched'?",
+          "carddescription": "How do plans to expand childcare provision in Scotland compare with schemes in the rest of the UK?",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/EE42/production/_98249906_sturgeon_unmatched_quote.jpg"
+        },
+        {
+          "title": "Can we tell if Donald Trump has a high IQ?",
+          "description": "As the US president again boasts about his IQ, how does his intelligence compare with other presidents?",
+          "link": "http://www.bbc.co.uk/news/world-us-canada-41573846",
+          "guid": "http://www.bbc.co.uk/news/world-us-canada-41573846",
+          "pubDate": "2017-10-11T10:03:20Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T10:03:20Z",
+          "id": "http://www.bbc.co.uk/news/world-us-canada-41573846",
+          "twittercard": "summary_large_image",
+          "cardtitle": "What is Donald Trump's IQ?",
+          "carddescription": "As the US president again boasts about his IQ, how does his intelligence compare with other presidents?",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/BAB3/production/_98259774_tv041978200.jpg"
+        },
+        {
+          "title": "10 toughest places for girls to go to school",
+          "description": "The countries where most girls don't even get to start primary school.",
+          "link": "http://www.bbc.co.uk/news/business-41558486",
+          "guid": "http://www.bbc.co.uk/news/business-41558486",
+          "pubDate": "2017-10-10T23:08:41Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-10T23:08:41Z",
+          "id": "http://www.bbc.co.uk/news/business-41558486",
+          "twittercard": "summary_large_image",
+          "cardtitle": "10 toughest places for girls to go to school",
+          "carddescription": "The countries where most girls don't even get to start primary school.",
+          "cardimage": "https://ichef.bbci.co.uk/news/560/cpsprodpb/108C8/production/_98248776_aa7871d4-134f-48cd-ae55-82b5826684ee.jpg"
+        },
+        {
+          "title": "Diary of Anne Frank transformed into graphic adaptation",
+          "description": "The words of young wartime diarist Anne Frank are reimagined in comic-strip format.",
+          "link": "http://www.bbc.co.uk/news/world-europe-41517570",
+          "guid": "http://www.bbc.co.uk/news/world-europe-41517570",
+          "pubDate": "2017-10-10T23:51:29Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-10T23:51:29Z",
+          "id": "http://www.bbc.co.uk/news/world-europe-41517570",
+          "twittercard": "summary_large_image",
+          "cardtitle": "The world's most-read diary in pictures",
+          "carddescription": "The words of young wartime diarist Anne Frank are reimagined in comic-strip format.",
+          "cardimage": "https://ichef-1.bbci.co.uk/news/560/cpsprodpb/3A3A/production/_98160941_img_8838.jpg"
+        },
+        {
+          "title": "Colin Kaepernick: From one man kneeling to a movement dividing a country",
+          "description": "Colin Kaepernick protested by kneeling during the US national anthem in the summer of 2016. A whole movement has grown around that gesture.",
+          "link": "http://www.bbc.co.uk/sport/american-football/41530732",
+          "guid": "http://www.bbc.co.uk/sport/american-football/41530732",
+          "pubDate": "2017-10-11T13:23:37Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T13:23:37Z",
+          "id": "http://www.bbc.co.uk/sport/american-football/41530732"
+        },
+        {
+          "title": "World Cup 2018: Lionel Messi hat-trick fires Argentina to Russia",
+          "description": "Lionel Messi scores a hat-trick to rescue Argentina's 2018 World Cup qualifying bid by securing a 3-1 away win against Ecuador in Quito.",
+          "link": "http://www.bbc.co.uk/sport/football/41580450",
+          "guid": "http://www.bbc.co.uk/sport/football/41580450",
+          "pubDate": "2017-10-11T09:44:57Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T09:44:57Z",
+          "id": "http://www.bbc.co.uk/sport/football/41580450"
+        },
+        {
+          "title": "World Cup 2018: Argentina, Portugal, Panama qualify; USA, Chile out",
+          "description": "Argentina coach Jorge Sampaoli salutes Lionel Messi after he rescues the country's place in the 2018 World Cup, as Panama qualify at the expense of the US.",
+          "link": "http://www.bbc.co.uk/sport/football/41578895",
+          "guid": "http://www.bbc.co.uk/sport/football/41578895",
+          "pubDate": "2017-10-11T14:41:50Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:41:50Z",
+          "id": "http://www.bbc.co.uk/sport/football/41578895"
+        },
+        {
+          "title": "Shanghai Masters: Nick Kyrgios fined for quitting match",
+          "description": "Nick Kyrgios is fined after going through with a threat to quit his match if he lost a tie-break at the Shanghai Masters.",
+          "link": "http://www.bbc.co.uk/sport/tennis/41564893",
+          "guid": "http://www.bbc.co.uk/sport/tennis/41564893",
+          "pubDate": "2017-10-11T09:09:19Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T09:09:19Z",
+          "id": "http://www.bbc.co.uk/sport/tennis/41564893"
+        },
+        {
+          "title": "Under-17 World Cup: England through to the last 16 in India",
+          "description": "England are through to the last 16 of the Under-17 World Cup in India, after beating Mexico 3-2.",
+          "link": "http://www.bbc.co.uk/sport/football/41586172",
+          "guid": "http://www.bbc.co.uk/sport/football/41586172",
+          "pubDate": "2017-10-11T14:51:51Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T14:51:51Z",
+          "id": "http://www.bbc.co.uk/sport/football/41586172"
+        },
+        {
+          "title": "Nations League: Wales beaten to spot in league A by Netherlands",
+          "description": "Wales are beaten to a place in the top league of Uefa's new Nations League tournament with England going into League A.",
+          "link": "http://www.bbc.co.uk/sport/football/41580638",
+          "guid": "http://www.bbc.co.uk/sport/football/41580638",
+          "pubDate": "2017-10-11T10:35:22Z",
+          "media_thumbnail": "",
+          "mrss_thumbnail": "replace with media_thumbnail",
+          "date": "2017-10-11T10:35:22Z",
+          "id": "http://www.bbc.co.uk/sport/football/41580638"
+        }
+      ],
+      "title": "BBC News - Home",
+      "description": "BBC News - Home",
+      "link": "http://www.bbc.co.uk/news/",
+      "generator": "RSS for Node",
+      "lastBuildDate": "2017-10-11T15:53:26Z",
+      "copyright": "Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.",
+      "language": "en-gb",
+      "ttl": "15",
+      "image": {
+        "url": "http://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif",
+        "title": "BBC News - Home",
+        "link": "http://www.bbc.co.uk/news/"
+      }
+    }
+  preview-mode: live
+  preview-container: event
+  search-term: 
+  service-url: 
+  xclass: 
+  xstyle: 
