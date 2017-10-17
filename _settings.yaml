@@ -1,11 +1,4 @@
-id: !!int 240
 contentType: Card
-UserActions:
-  cardId: !!int 240
-  hasNotifications: !!bool true
-  isIsoloated: !!bool false
-  maxItems: !!int 3
-  pinnable: !!bool true
 title: News
 name: template-news-card
 StreamSource: null
@@ -17,19 +10,19 @@ MaxItemsField:
   MaxItems: 3
 CardComponent: template-news-card/template-news-card-card
 StoreMetadataField:
-  description: 
-  logourl: 
+  description: Expandable news card that pulls RSS news feed from bbc.co.uk
+  logourl: template-news-card/icons8-news.png
   storehide: !!bool false
   disableWorkplace: !!bool false
 CommonPart:
   Owner: !!int 222
   Container: null
   CreatedUtc: 2017-10-11T15:21:56.8870318Z
-  PublishedUtc: 2017-10-11T16:08:20.5119002Z
-  ModifiedUtc: 2017-10-11T16:08:20.4806460Z
-  VersionCreatedUtc: 2017-10-11T16:08:20.0000000
-  VersionPublishedUtc: 2017-10-11T16:08:20.0000000
-  VersionModifiedUtc: 2017-10-11T16:08:20.0000000
+  PublishedUtc: 2017-10-17T12:26:14.1402517Z
+  ModifiedUtc: 2017-10-17T12:26:14.1089838Z
+  VersionCreatedUtc: 2017-10-17T12:26:14.0000000
+  VersionPublishedUtc: 2017-10-17T12:26:14.0000000
+  VersionModifiedUtc: 2017-10-17T12:26:14.0000000
 ServicePart:
   ConnectorTypeName: Generic RSS
   ConnectorTypeId: !!int 241
@@ -70,10 +63,10 @@ RecurringTaskPart:
   ActivityType: adenin.Now.Activities.CardTask.UpdateCard
   StartDateUtc: null
   EndDateUtc: null
-  NextOccurrenceUtc: 2017-10-13T12:40:15.0000000
+  NextOccurrenceUtc: 2017-10-17T12:27:12.0000000
   Priority: !!int 5
   Status: Enabled
   NowFlag: 0
-  LastExecutionUTC: 2017-10-13T12:40:15.0000000
+  LastExecutionUTC: 2017-10-17T12:27:12.0000000
   EnableWebHook: !!bool false
   WebHookToken: null

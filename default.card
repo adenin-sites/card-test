@@ -52,7 +52,7 @@ properties:
     actionListeners:
       - _start
 $meta:
-  cardId: 240
+  cardId: -1
   preview-data: |-
     {
       "items": [
